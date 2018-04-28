@@ -1,0 +1,39 @@
+version: "5.3.0"
+name: HolisticWare_Core_Math
+id: HolisticWare_Core_Math
+publisher:  HolisticWare
+publisher-url: http://holisticware.net
+src-url: https://github.com/holisticware
+summary: HolisticWare_Core_Math component
+icons: 
+  - ./icons/icon_128x128.png
+  - ./icons/icon_512x512.png
+details: ./Details.md
+license: ../License.md
+getting-started: ./GettingStarted.md
+
+is_shell: true
+no_build: true
+local-nuget-repo: ../output/
+
+libraries:
+  net4:
+    - ../output/net4/HolisticWare_Core_Math.dll
+    
+packages:
+  net4:
+    - HolisticWare_Core_Math, Version=5.3.0
+
+samples:
+  - name: "HolisticWare_Core_Math Sample"
+    path: ../samples/HolisticWare_Core_Math.Samples.sln
+    removeProjects:
+      - HolisticWare_Core_Math
+    installNuGets:
+      - project: HolisticWare_Core_Math.Sample
+        packages:
+          - HolisticWare_Core_Math
+
+additional-files:
+  - source: "../External-Dependency-Info.txt"
+    destination: "THIRD-PARTY-NOTICES.txt"
